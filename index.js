@@ -40,33 +40,6 @@ const developers = ""
 ////////
 
 
-const http = require('http');
-const express = require('express');
-const app = express();
-app.get("/", (request, response) => {
-    response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-    http.get(`http://momen.glitch.me/`); /// حط اسم المشروع تبعك name تعديل مهم بدل
-}, 280000);
-
-// بكجات
-const Discord = require("discord.js");
-const {
-    YT_API_KEY,
-    prefix,
-    devs
-} = require('./config')
-const client = new Discord.Client({
-    disableEveryone: true
-})
-client.login(process.env.TOKEN);
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-
-});
-
 
 //كود البرودكاست
 
